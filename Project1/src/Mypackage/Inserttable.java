@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -20,13 +20,13 @@ public class Inserttable {
 			String last=s.next();
 			System.out.println("Enter the age: ");
 			String age=s.next();
-			class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/biodatadb","root","root");
 			PreparedStatement stmt=con.prepareStatement("insert into registration(id,first,last,age)values(?,?,?,?)");
-			start.setString(1,id);
-			start.setString(2,first);
-			start.setString(3,last);
-			Start.setString(4,age);
+			stmt.setString(1,id);
+			stmt.setString(2,first);
+			stmt.setString(3,last);
+			stmt.setString(4,age);
 			int i=stmt.executeUpdate();
 			if(i!=0) {
 				System.out.println("Record Added Successfully");

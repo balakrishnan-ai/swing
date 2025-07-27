@@ -1,16 +1,16 @@
 package Mypackage;
 
-import java.sql.connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 public class Createtable {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException{
 		// TODO Auto-generated method stub
 		
 		try {
-			class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/biodatadb","root","root");
 			Statement stmt=conn.createStatement();
 			

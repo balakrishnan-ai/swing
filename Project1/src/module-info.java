@@ -4,6 +4,6 @@
 /**
  * 
  */
-module Project1 {
-	requires java.desktop;
-}
+//module Project1 {
+	//requires java.desktop;
+//}
