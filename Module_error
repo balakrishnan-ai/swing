@@ -1,0 +1,18 @@
+swing Module error
+
+project file -> src -> module info.java
+
+solve the error code inside
+
+-----------------------------------------------------------------------
+/**                                                                    |
+ *                                                                      |
+ */
+/**                                                                      |
+ *                                                                       |  
+ */                                                                        |
+module Mani1 {                                                            |
+	requires java.desktop;                                                  |      
+}                                                                          |  
+
+---------------------------------------------------------------------------
