@@ -1,0 +1,54 @@
+//Package creating method pro_file -> src -> right click -> new -> package -> enter any string -> ok
+package lava;
+
+// Its using create a Frame using this Module
+import javax.swing.*;
+
+// Its using the action performed 
+import java.awt.event.*;
+
+// create a class with class name
+public class EventExample {
+
+  //Its a main()
+	public static void main(String[] args) {
+
+    //Create a frame 
+    // JFrame obj=new JFrame("Frame Name");
+		JFrame frame=new JFrame("Event Handling Example");
+
+    //Create a Button
+    // JButton obj=new JButton("Button name");
+		JButton btn=new JButton("Click Me");
+
+    // Adjust the button position and size
+    // obj.setBounds(x,y,width,length);
+		btn.setBounds(100,100,120,40);
+
+    // Its using the interconnect the "awt module"
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(frame, "Button was clicked");
+			}
+		});
+    //Add the button frame inside
+		frame.add(btn);
+
+    //Frame size
+    // obj.setSize(w,h);
+		frame.setSize(350,250);
+
+    // Frame layout set
+    // obj.setLayout(null);
+		frame.setLayout(null);
+
+    // exit the all function run after the exit
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    // Visible the frame
+		frame.setVisible(true);
+	
+		
+	}
+
+}
